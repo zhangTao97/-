@@ -1,0 +1,342 @@
+/* 组件样式 tao */
+
+/* 设备在线情况样式 start */
+.equ-online-situation{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10%;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.equ-online-situation .equ-situation-charts{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.equ-online-situation .equ-situation-charts #equ-charts{
+    width: 100%;
+    height: 100%;
+}
+.equ-online-situation .equ-situation-charts .equ-situation-charts-legend{
+    width: 130%;
+    height: 90%;
+    background-image: url("../../resources/img/tianmu-mountain/chart-legend.png");
+    background-repeat: no-repeat;
+    background-size: 68% 100%;
+    position: absolute;
+    top: 3%;
+    left: -16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.equ-situation-charts-legend .charts-legend-box{
+    width: 100%;
+    height: 30%;
+    color: #fff;
+    line-height: 4.7vh;
+    font-size: 1vw;
+    box-sizing: border-box;
+    padding-left: 17%;
+}
+.equ-situation-charts-legend .charts-legend-box span{
+    font-size: 0.9vw;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+/* 设备在线情况样式 end */
+
+/* 气象数据样式 start */
+.met-data-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 1vw;
+    box-sizing: border-box;
+    position: relative;
+}
+.met-data-content .met-data-date{
+    width: 8vw;
+    height: 2vw;
+    position: absolute;
+    top: -2.6vw;
+    right: 2.5vw;
+    line-height: 2vw;
+    font-size: 0.8vw;
+    text-align: center;
+    color: #00c6ff;
+}
+.met-data-content .met-data-date i{
+    color: #fff;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.met-data-content .met-data-date i:first-child{
+    position: absolute;
+    top: 50%;
+    left: -1.1vw;
+    transform: translateY(-50%);
+}
+.met-data-content .met-data-date i:last-child{
+    position: absolute;
+    top: 50%;
+    right: -1.1vw;
+    transform: translateY(-50%);
+}
+.met-data-content .met-data-content-box{
+    width: 5.3vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.met-data-content .met-data-content-box .met-top-t{
+    width: 100%;
+    height: 5.3vw;
+    background-image: url("../../resources/img/tianmu-mountain/met-top.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 0.9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.met-data-content .met-data-content-box .met-bottom-t{
+    width: 100%;
+    height: 4vh;
+    border-bottom: 2px solid #37d3ff;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top,rgba(66,197,231,0.4),rgba(66,197,231,0));
+    text-align: center;
+    line-height: 4.5vh;
+    color: #fff;
+    font-size: 1vw;
+}
+
+/* 气象数据样式 end */
+
+/* 实时气象样式 start */
+.real-time-content{
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+.real-time-content .realtime-tiele{
+    width: 100%;
+    height: 4vh;
+    background-image: url("../../resources/img/tianmu-mountain/realtime.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 4.3vh;
+    color: #fff;
+    font-size: 0.8vw;
+    position: relative;
+}
+.real-time-content .realtime-tiele .realtime-prev,.real-time-content .realtime-tiele .realtime-next{
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    cursor: pointer;
+    z-index: 9;
+}
+.real-time-content .realtime-tiele .realtime-prev{
+    top: 0;
+    left: 0.5vw;
+}
+.real-time-content .realtime-tiele .realtime-next{
+    top: 0;
+    right: 0.5vw;
+}
+.real-time-content .realtime-t-box{
+    width: 100%;
+    height: 15.8vh;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,7vw);
+    grid-template-rows: repeat(auto-fill,3.7vw);
+    justify-content: space-between;
+    grid-row-gap: 7px;
+    overflow: auto;
+}
+.real-time-content .realtime-t-box .realtime-block-box{
+    width: 7vw;
+    height: 3.7vw;
+    background-image: url("../../resources/img/tianmu-mountain/realtime-block.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    padding: 10% 0 0 15%;
+    box-sizing: border-box;
+    font-size: 0.7vw;
+}
+.real-time-content .realtime-t-box .realtime-block-box p{
+    font-size: 0.8vw;
+    margin-bottom: 3px;
+}
+.real-time-content .realtime-t-box .realtime-block-box span:nth-of-type(1){
+    color: #02c6ff;
+    margin-right: 3px;
+}
+/* 实时气象样式 end */
+
+/* 病虫害对比分析样式 start */
+.pests-analysis-content{
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+.pests-analysis-content #pests-t-charts{
+    width: 100%;
+    height: 100%;
+}
+/* 病虫害对比分析样式 end */
+
+/* 虫情趋势样式 start */
+.insect-trend-content,.insect-trend-content #insect-trend-chart{
+    width: 100%;
+    height: 100%;
+}
+/* 虫情趋势样式 end */
+
+/* 监控视频样式 start */
+.video-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 5px 15px 15px;
+    box-sizing: border-box;
+}
+.video-content .video-select-t{
+    position: absolute;
+    width: 10vw;
+    height: 3.3vh;
+    top: -24%;
+    right: 2vw;
+    display: flex;
+    align-items: center;
+}
+.video-content .video-select-t .el-select:hover .el-input__inner{
+    border-color:#00c6ff
+}
+.video-content .video-select-t .el-input__inner{
+    background-color: transparent;
+    border-color:#00c6ff;
+    color: #00c6ff;
+}
+.video-content .video-select-t .el-input.is-active .el-input__inner, .el-input__inner:focus{
+    border-color:#00c6ff
+}
+.video-content .video-select-t .el-select .el-input__inner:focus{
+    border-color:#00c6ff
+}
+.video-content .video-select-t .el-select .el-input.is-focus .el-input__inner{
+    border-color:#00c6ff
+}
+.el-select-dropdown__item.selected{
+    color: #00c6ff;
+}
+/* 监控视频样式 end */
+
+
+/* 中间上部分样式 start */
+.middle-top-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.middle-top-content .middle-little-box{
+    width: 14vw;
+    height: 100%;
+    background-image: url("../../resources/img/tianmu-mountain/middle-top.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle-top-content .middle-little-box span{
+    color: #fff;
+    display: block;
+    font-size: 0.9vw;
+}
+.middle-top-content .middle-little-box span:last-child{
+    color: #00c6ff;
+    font-size: 1.3vw;
+    margin-top: 5px;
+}
+/* 中间上部分样式 end */
+
+/* 中间底部内容样式 start */
+.middle-bottom-content{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../resources/img/tianmu-mountain/middle-bottom.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.middle-bottom-content #map-t{
+    width: 100%;
+    height: 100%;
+}
+.amap-logo,.amap-copyright{
+    display: none !important;
+}
+.middle-bottom-content .map-legend{
+    width: 150px;
+    height: 170px;
+    background-image: url("../../resources/img/tianmu-mountain/map-legend.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+.middle-bottom-content .map-legend .map-legend-title{
+    width: 100%;
+    height: 1vw;
+    text-align: center;
+    line-height: 1vw;
+    color: #02d8ff;
+}
+.middle-bottom-content .map-legend .legend-checked{
+    width: 100%;
+    height: calc(100% - 1vw);
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+}
+.middle-bottom-content .map-legend .legend-checked{
+    user-select: none;
+}
+.middle-bottom-content .map-legend .legend-checked .legend-box{
+    width: 100%;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.middle-bottom-content .map-legend .legend-checked .legend-box .legend-img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.middle-bottom-content .map-legend .legend-checked .legend-box .legend-img img{
+    /* width: 100%; */
+    height: 100%;
+}
+/* 中间底部内容样式 end */

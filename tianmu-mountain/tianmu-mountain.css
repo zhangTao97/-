@@ -1,0 +1,149 @@
+/* 天目山粮仓整体架构样式 start */
+body,html,#app{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("../../resources/img/tianmu-mountain/bac.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* 天目山粮仓整体架构样式 end */
+
+
+
+/* 头部标题样式 start */
+.granary-top-title{
+    width: 100%;
+    height: 5vw;
+    background-image: url("../../resources/img/tianmu-mountain/top.png");
+    background-repeat: no-repeat;
+    background-size: 65vw 100%;
+    background-position: center;
+    padding: 0 1vw;
+    box-sizing: border-box;
+    display: flex;
+}
+.granary-top-title .title-left,.granary-top-title .title-right{
+    width: calc((100% - 65vw) / 2);
+    height: 2.5vw;
+    color: #b9cbd4;
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+}
+.granary-top-title .title-middle{
+    width: 65vw;
+    text-align: center;
+    line-height: 4vw;
+    font-size: 1.9vw;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.granary-top-title .title-middle span{
+    background-image: linear-gradient(to bottom, #DDFBFE ,#AAE4FF);
+    -webkit-background-clip:text;
+    color: transparent;
+}
+.granary-top-title .title-right{
+    display: flex;
+    padding-left: 2vw;
+    box-sizing: border-box;
+    
+}
+.granary-top-title .title-right .weather-img{
+    width: 2.5vw;
+    height: 2.5vw;
+    padding: 0.3vw;
+    box-sizing: border-box;
+}
+.granary-top-title .title-right .weather-img img{
+    width: 100%;
+    height: 100%;
+}
+/* 头部标题样式 end */
+
+/* 底部内容样式 start */
+.granary-bottom-content{
+    width: 100%;
+    height: calc(100% - 5vw - 20px);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw 10px;
+    box-sizing: border-box;
+}
+.granary-bottom-content .content-left,.granary-bottom-content .content-right{
+    width: 26vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.granary-bottom-content .content-middle{
+    flex: 1;
+    margin: 0 20px;
+}
+.granary-bottom-content .content-middle .middle-top-box{
+    width: 100%;
+    height: 6vw;
+}
+.granary-bottom-content .content-middle .middle-bottom-box{
+    width: 100%;
+    height: calc(100% - 6vw - 10px);
+    margin-top: 10px;
+}
+/* 底部内容样式 end */
+
+/* 两边盒子样式 start */
+.granary-block-box{
+    width: 100%;
+    height: 27%;
+    background-image: url("../../resources/img/tianmu-mountain/block-small.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+.granary-block-box .granary-block-box-title{
+    width: 100%;
+    height: 25%;
+    color: #fff;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    padding-left: 6%;
+    box-sizing: border-box;
+    line-height: 6.3vh;
+}
+.granary-block-box .granary-block-content{
+    flex: 1;
+}
+.content-left .granary-block-box:nth-child(2),.content-left .granary-block-box:nth-child(3),.content-right .granary-block-box:nth-child(2),.content-right .granary-block-box:nth-child(3){
+    height: 35%;
+    background-image: url("../../resources/img/tianmu-mountain/block-big.png");
+    min-height: 177px;
+}
+.content-left .granary-block-box:nth-child(2) .granary-block-box-title,.content-left .granary-block-box:nth-child(3) .granary-block-box-title,.content-right .granary-block-box:nth-child(2) .granary-block-box-title,.content-right .granary-block-box:nth-child(3) .granary-block-box-title{
+    line-height: 7.3vh;
+    height: 7.3vh;
+    min-height: 50px;
+}
+/* 两边盒子样式 end */
+
+/* 通用样式 start */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #AAE4FF !important;
+}
+.no-data-t{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+/* 通用样式 end */

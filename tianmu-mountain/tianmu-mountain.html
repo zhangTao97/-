@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Description">
+    <meta name="renderer" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>“天目粮仓”数智大田</title>
+
+    $[_layoutcss]$
+
+    <!-- 本地 CSS -->
+    <link rel="stylesheet" href="../video-components/video-components.css">
+    <link rel="stylesheet" href="./tianmu-mountain.css">
+    <link rel="stylesheet" href="./granary-component.css">
+
+    $[_layoutjs]$
+
+    <script src="../../api_server/bi/config?bi_name=device-tms"></script>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=bc7ac80cf4742961cc863615b54d675c"></script>
+    <script src="https://cdn.static.zjtpyun.com/common/plugin/echarts/4.8.0/dist/echarts.min.js"></script>
+    <script src="https://cdn.static.zjtpyun.com/common/plugin/v-charts/lib/index.js"></script>
+    <!-- 本地 JS -->
+    <script src="./tianmu-mountain.js"></script>
+    <!-- 头部组件 -->
+    <script src="./granary-top-title.js"></script>
+    <!-- 两边块级组件 -->
+    <script src="./granary-block-box.js"></script>
+    <!-- 设备在线情况 -->
+    <script src="./granary-equ-situation.js"></script>
+    <!-- 气象数据 -->
+    <script src="./granary-met-data.js"></script>
+    <!-- 实时气象 -->
+    <script src="./granary-realtime-weather.js"></script>
+    <!-- 病虫害占比分析 -->
+    <script src="./granary-pests-analysis.js"></script>
+    <!-- 虫情趋势 -->
+    <script src="./granary-insect-trend.js"></script>
+    <!-- 监控视频 -->
+    <script src="../video-components/video-components.js"></script>
+    <script src="./granary-surveillance-video.js"></script>
+    <script src="./module_video_exp.js"></script>
+    <!-- 中间顶部 -->
+    <script src="./granary-middle-top.js"></script>
+    <!-- 中间底部 -->
+    <script src="./granary-middle-bottom.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 头部标题 start -->
+        <granary-top-title :head-title="headTitle" :area-code="areaCode"></granary-top-title>
+        <!-- 头部标题 end -->
+
+        <!-- 底部内容 start -->
+        <div class="granary-bottom-content">
+            <!-- 左侧 -->
+            <div class="content-left">
+                <granary-block-box v-for="(item,index) in leftComponents" :key="item.id + 'left' + index" :title="item.title">
+                    <component :area-code="areaCode" :option="item" :is="item.tag" :terminal-list="terminalList"></component>
+                </granary-block-box>
+            </div>
+            <!-- 中间 -->
+            <div class="content-middle">
+                <div class="middle-top-box">
+                    <component :is="middleComponents[0].tag" :option="middleComponents[0]" ></component>
+                </div>
+                <div class="middle-bottom-box">
+                    <component :is="middleComponents[1].tag" :terminal-list="terminalList" :option="middleComponents[0]" ></component>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="content-right">
+                <granary-block-box v-for="(item,index) in rightComponents" :key="item.id + 'right' + index" :title="item.title">
+                    <component :is="item.tag" :option="item" :terminal-list="terminalList"></component>
+                </granary-block-box>
+            </div>
+        </div>
+        <!-- 底部内容 end -->
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            mixins: [pageConfig]
+        })
+    </script>
+</body>
+</html>
